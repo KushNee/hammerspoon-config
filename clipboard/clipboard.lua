@@ -145,6 +145,7 @@ populateMenu = function(key)
    end-- end if else
    -- footer
    table.insert(menuData, {title="-"})
+   table.insert(menuData, {title="Clear Last One", fn = function() clearLastItem() end})
    table.insert(menuData, {title="Clear All", fn = function() clearAll() end })
    if (key.alt == true or pasteOnSelect) then
       table.insert(menuData, {title="Direct Paste Mode ✍", disabled=true})
