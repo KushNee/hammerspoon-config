@@ -1,6 +1,6 @@
 local hyper = {'ctrl', 'cmd'}
 
-hs.hotkey.bind({"cmd"}, "L", hs.caffeinate.systemSleep)
+-- hs.hotkey.bind({"cmd"}, "L", hs.caffeinate.systemSleep)
 
 -- show front activated app infos
 hs.hotkey.bind(
