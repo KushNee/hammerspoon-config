@@ -7,11 +7,12 @@ require "usb.usb"
 require "wifi.wifi"
 require "window.window"
 -- require "clipboard.clipboard"
-require "statuslets.statuslets"
 require "volume.volume"
 require "clipboard.an-clipboard"
 require "switcher.switcher"
 require "screen.screen"
 require "clock.clock"
--- require "speaker.speaker"
+require "repeatTask.repeatTask"
 
+-- HoldToQuit = hs.loadSpoon("HoldToQuit")
+-- HoldToQuit:start()

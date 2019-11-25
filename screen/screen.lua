@@ -17,7 +17,7 @@ function focusScreen(option)
     local point = hs.geometry.rectMidPoint(target:fullFrame())
     hs.mouse.setAbsolutePosition(point)
     -- move cursor to current screen edge
-    hs.mouse.setRelativePosition(hs.geometry.point(0, point.y))
+    -- hs.mouse.setRelativePosition(hs.geometry.point(point.x, point.y))
   end
   
   -- binding cmd + left as focus left screen

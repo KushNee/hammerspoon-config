@@ -137,7 +137,7 @@ hs.hotkey.bind({"ctrl", "alt"}, "Down",  down_third)
 
 -- Maximized
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "F",     hs.fnutils.partial(winresize, "max"))
-hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Up",    hs.fnutils.partial(winresize, "max"))
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "return",    hs.fnutils.partial(winresize, "max"))
 
 -- Move between screens
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "Left",  hs.fnutils.partial(winmovescreen, "left"))

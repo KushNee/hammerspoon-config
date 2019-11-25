@@ -69,15 +69,22 @@ switcher:queryChangedCallback(function (query)
   timer:start()
 end)
 
-function showSwitcher()
+function showSwitcher(part)
   switcher:width(width)
   switcher:show()
-  local windows = hs.window.filter.new(true):getWindows()
+  local wf
+  if part == true then
+    wf=hs.window.filter.new():setCurrentSpace(true):setScreens(hs.screen.mainScreen():name())
+  else
+    wf=hs.window.filter.new(true)
+  end
+  local windows = wf:getWindows()
   choices = hs.fnutils.map(windows, function (window)
     local app = window:application()
 
-    if app:name() ~= "" and app:name() ~= "Hammerspoon"
-     and app:name() ~= "CleanMyMac X Menu"  then
+    if app:name() ~= "" 
+    and app:name() ~= "Hammerspoon" then
+    -- and (app:name() ~= "Hammerspoon" or (app:name() == "Hammerspoon" and window:title() == "Hammerspoon Console")) then
       return {
         wid = window:id(),
         pid = app:pid(),
@@ -110,6 +117,14 @@ switchBind = hs.hotkey.bind({ "alt" }, "tab", function ()
   if switcher:isVisible() then
     hs.eventtap.keyStroke({ "ctrl" }, "n")
   else
-    showSwitcher()
+    showSwitcher(true)
+  end
+end)
+
+switchAllBind = hs.hotkey.bind({"alt", "shift"}, "tab", function ()
+  if switcher:isVisible() then
+    hs.eventtap.keyStroke({"ctrl"}, "n")
+  else
+    showSwitcher(false)
   end
 end)

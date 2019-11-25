@@ -1,6 +1,6 @@
 
--- SONY MDR-1000X
-local bleDeviceID = '04-5d-4b-52-d0-0a'
+-- AirPods Pro
+local bleDeviceID = '14-87-6a-5e-8d-f6'
 
 
 function bluetoothSwitch(state)
