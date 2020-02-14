@@ -21,7 +21,7 @@ function toggleShow()
             w = 700,
             h = 460
         })
-        canvas[1].text = os.date("%m/%d %a\n%H:%M")
+        canvas[1].text = os.date("%m/%d %a")
         canvas:show()
         timer = hs.timer.doAfter(4, function()
             canvas:hide()

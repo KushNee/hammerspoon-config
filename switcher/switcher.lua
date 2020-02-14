@@ -128,3 +128,4 @@ switchAllBind = hs.hotkey.bind({"alt", "shift"}, "tab", function ()
     showSwitcher(false)
   end
 end)
+

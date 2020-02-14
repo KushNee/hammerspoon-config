@@ -6,10 +6,16 @@ local hyper = {'ctrl', 'cmd'}
 hs.hotkey.bind(
     hyper, ".",
     function()
-        hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
+      hs.alert.show(string.format("App path:        %s\nApp name:      %s\nApp ID:            %s\nIM source id:  %s",
                                     hs.window.focusedWindow():application():path(),
                                     hs.window.focusedWindow():application():name(),
-                                    hs.keycodes.currentSourceID()))
+                                    hs.window.focusedWindow():application():bundleID(),
+                                    hs.keycodes.currentLayout()))
     end)
 
-
+hs.hotkey.bind(
+  hyper, "h",
+  function()
+    os.execute("sh /Users/kushnee/heyspace.sh")
+  end
+)

@@ -21,6 +21,6 @@ function focusScreen(option)
   end
   
   -- binding cmd + left as focus left screen
-  hs.hotkey.bind({ "cmd", "shift" }, ",", hs.fnutils.partial(focusScreen, "Left"))
+  hs.hotkey.bind({ "cmd", "shift" }, "Left", hs.fnutils.partial(focusScreen, "Left"))
   -- binding cmd + right as focus right screen
-  hs.hotkey.bind({ "cmd", "shift" }, ".", hs.fnutils.partial(focusScreen, "Right"))
+  hs.hotkey.bind({ "cmd", "shift" }, "Right", hs.fnutils.partial(focusScreen, "Right"))
